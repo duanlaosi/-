@@ -316,3 +316,10 @@ cavity occupancy analysis
 * docking结果如何统计成“转运倾向指标”
 
 这个比普通 docking 更接近你这个课题的发表级方法。
+
+
+对接流程：
+RDKit         → 结构处理
+Open Babel    → 格式转换
+Meeko         → pdbqt准备 ⭐
+AutoDock Vina → 对接
