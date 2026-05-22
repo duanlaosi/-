@@ -1,0 +1,3 @@
+obabel fold_2026_05_18_16_58_oqu84543_seed1_model_2.cif -O oqu_fold2.pdb
+conda activate openbabel_env
+conda install meeko
