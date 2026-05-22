@@ -14,3 +14,20 @@ mk_prepare_receptor.py --pdb loc_fold0.pdb -o loc_fold0.pdbqt
 
 在meeko-env环境安装gemmi,换用gemmi进行cif到pdb转换
 conda install gemmi=0.6.7
+gemmi convert fold_2026_05_17_21_46_loc_os02g09720_model_0.cif loc_fold0_gemmi.pdb
+还是不行，chatgpt建议用pdbfixer进行pdb修复（电荷、氢键等）
+在meeko_env安装conda install pdbfixer
+conda install \
+  openmm==8.0.0 \
+  pdbfixer==1.9
+
+python 3.10
+setuptools 68.2.2
+openmm 8.0
+pdbfixer 1.9
+meeko latest
+
+新建环境用meeko（需要rdkit和python3，10)；
+ conda create -n meeko_fixed python=3.10 
+conda activate meeko_fixed
+conda intall meeko
