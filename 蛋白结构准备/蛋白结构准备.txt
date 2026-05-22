@@ -1,3 +1,12 @@
 obabel fold_2026_05_18_16_58_oqu84543_seed1_model_2.cif -O oqu_fold2.pdb
 conda activate openbabel_env
 conda install meeko
+conda install rdkit=2022.03.5 # 解决meeko需要的rdkit版本依赖，rdkit2022.03.5需要:rdkit =2022.3.5 * is not installable because there are no viable options
+   ├─ rdkit 2022.03.5 would require
+   │  └─ python >=3.10,<3.11.0a0 *, which conflicts with any installable versions previously reported;
+卸载openbabel_env 的meeko,新建环境meeko_env
+conda create -n meeko_env python=3.10
+conda activate meeko_env
+conda install rdkit=2023.03
+conda install "meeko==0.5.0"
+mk_prepare_receptor.py -i loc_fold0.pdb -o loc_fold0.pdbqt
