@@ -1,0 +1,1 @@
+obabel conf_2_E_69.35.pdb -O Isoxaflutole_rdkit_2.pdbqt -h --partialcharge gasteiger
